@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="pull-left">BootCamp</div>
+            <div class="pull-right">Coding Quiz</div>
+        </header>
+        <main>
+            <form class="questionForm" id="q1" data-question="1">
+                <h3>1. What is the capital of Russia?</h3>
+                <ul>
+                    <li><input name="q1" type="radio" value="a">Kiev</li>
+                    <li><input name="q1" type="radio" value="b">Moscow</li>
+                    <li><input name="q1" type="radio" value="c">Minsk</li>
+                    <li><input name="q1" type="radio" value="d">Leningrad</li>
+                </ul>
+                <button id="submit">Submit</button>
+
+            </form>
+
+            <form class="questionForm" id="q2" data-question="2">
+                <h3>2. What is the capital of Brazil?</h3>
+                <ul>
+                    <li><input name="q2" type="radio" value="a">Basilia</li>
+                    <li><input name="q2" type="radio" value="b">Salvador</li>
+                    <li><input name="q2" type="radio" value="c">Rio De Janeiro</li>
+                    <li><input name="q2" type="radio" value="d">Sap Paulo</li>
+                </ul>
+                <button id="submit">Submit</button>
+
+            </form>
+
+            <form class="questionForm" id="q3" data-question="3">
+                <h3>3. What is the capital of South Africa?</h3>
+                <ul>
+                    <li><input name="q3" type="radio" value="a">Johannesburg</li>
+                    <li><input name="q3" type="radio" value="b">Pretoria</li>
+                    <li><input name="q3" type="radio" value="c">Bloemfontein</li>
+                    <li><input name="q3" type="radio" value="d">All of the Above</li>
+                </ul>
+                <button id="submit">Submit</button>
+
+            </form>
+
+            <form class="questionForm" id="q4" data-question="4">
+                <h3>4. What was the capital of West Germany?</h3>
+                <ul>
+                    <li><input name="q4" type="radio" value="a">Bonn</li>
+                    <li><input name="q4" type="radio" value="b">West Berlin</li>
+                    <li><input name="q4" type="radio" value="c">Frankfurt</li>
+                    <li><input name="q4" type="radio" value="d">Leipzig</li>
+                </ul>
+                <button id="submit">Submit</button>
+
+            </form>
+
+            <form class="questionForm" id="q5" data-question="5">
+                <h3>5. What was the first capital of Minnesota?</h3>
+                <ul>
+                    <li><input name="q5" type="radio" value="a">Duluth</li>
+                    <li><input name="q5" type="radio" value="b">St. Paul</li>
+                    <li><input name="q5" type="radio" value="c">St. Peter</li>
+                    <li><input name="q5" type="radio" value="d">Minneapolis</li>
+                </ul>
+                <button id="submit">Submit</button>
+
+            </form>
+            <div id="results"></div>
+            <br>
+            <div class="button">
+            <button onclick="location.reload();" class="reload">Try Again?</button>
+        </div>
+        </main>
+        <footer>
+            <div class="timer">Timer:<span id="time">02:00</span></div>
+            <div class="pull-right">Total: 5 Questions</div>
+            <div class="pull-left">Created by Alex Norton for Week 4 Homework Assignment</div>
+        </footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="style.js"></script>
+</body>
+
+</html>
