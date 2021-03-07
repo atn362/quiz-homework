@@ -3,7 +3,11 @@ var total = 5;
 var point = 1;
 var highest = total * point; 
 
-function score(){
+alert("Read Some Questions Carefully");
+
+// let data = sessionStorage.getItem('key');
+
+function init(){
     sessionStorage.setItem('a1', 'b');
     sessionStorage.setItem('a2', 'a');
     sessionStorage.setItem('a3', 'd');
@@ -11,7 +15,14 @@ function score(){
     sessionStorage.setItem('a5', 'c');
 
 }
-alert("Read Some Questions Carefully");
+init();
+// let a1 = sessionStorage.getItem('a1');
+// let a2 = sessionStorage.getItem('a2');
+// let a3 = sessionStorage.getItem('a3');
+// let a4 = sessionStorage.getItem('a4');
+// let a5 = sessionStorage.getItem('a5');
+// console.log(a2)
+
 
 $(document).ready(function(){
     $('.questionForm').hide();
@@ -62,6 +73,7 @@ function process(q){
         if(submitted == sessionStorage.a1){
             score++;
         }
+        else{}
     }
     if(q == "q2"){
         var submitted = $('input[name=q2]:checked').val();
@@ -92,8 +104,9 @@ function process(q){
     }
     return false;
 }
-window.addEventListener('load', score, false);
+window.addEventListener('load', init, false);
 }
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -104,38 +117,15 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.text(minutes + ":" + seconds);
-
         if (--timer < 0) {
             timer = duration;
         }
-    }, 1000);function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+    }, 1000);
     
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-            display.text(minutes + ":" + seconds);
-    
-            if (--timer < 0) {
-                timer = duration;
-            }
-        }, 1000);
-    }
-    
-    jQuery(function ($) {
-        var twoMinutes = 60 * 0.5,
-            display = $('#time');
-        startTimer(twoMinutes, display);
-    });
 }
 
 jQuery(function ($) {
-    var twoMinutes = 60 * 0.5,
+    var halfMinute = 60 * 0.5;
         display = $('#time');
-    startTimer(twoMinutes, display);
-    
+    startTimer(halfMinute, display);
 });
-    
