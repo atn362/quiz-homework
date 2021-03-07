@@ -2,7 +2,7 @@ var score = 0;
 var total = 5;
 var point = 1;
 var highest = total * point; 
-
+//hello 
 function score(){
     sessionStorage.setItem('a1', 'b');
     sessionStorage.setItem('a2', 'a');
