@@ -1,12 +1,13 @@
+//Establishes the variables
 var score = 0;
 var total = 5;
 var point = 1;
 var highest = total * point; 
 
+//sends alert to read carefully
 alert("Read Some Questions Carefully");
 
-// let data = sessionStorage.getItem('key');
-
+//stores the correct answers in the sessionStorage
 function init(){
     sessionStorage.setItem('a1', 'b');
     sessionStorage.setItem('a2', 'a');
@@ -15,21 +16,18 @@ function init(){
     sessionStorage.setItem('a5', 'c');
 
 }
+//runs the function 
 init();
-// let a1 = sessionStorage.getItem('a1');
-// let a2 = sessionStorage.getItem('a2');
-// let a3 = sessionStorage.getItem('a3');
-// let a4 = sessionStorage.getItem('a4');
-// let a5 = sessionStorage.getItem('a5');
-// console.log(a2)
 
-
+//runs the ready function while hiding the question form and restart button
 $(document).ready(function(){
     $('.questionForm').hide();
     $('.button').hide();
 
+//makes the first question visible 
     $('#q1').show();
 
+//allows for the first question to be answered followed by the remaining questions
     $('#q1 #submit').click(function(){
         $('.questionForm').hide();
         process('q1');
@@ -66,14 +64,15 @@ $(document).ready(function(){
 
 });
 
-
+//begins the process function and evaluates the answer provided by the user and checks it against 
+//the stored values of the correct answers
 function process(q){
     if(q == "q1"){
         var submitted = $('input[name=q1]:checked').val();
         if(submitted == sessionStorage.a1){
             score++;
         }
-        else{}
+
     }
     if(q == "q2"){
         var submitted = $('input[name=q2]:checked').val();
@@ -104,28 +103,52 @@ function process(q){
     }
     return false;
 }
+location.reload();
+//loads the events which process the functions of the quiz
 window.addEventListener('load', init, false);
 }
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+//this function allows for the timer to be set at 1 minute and counts down in seconds
+//
+(function() {
+    var sec = 60;
+    function startTimer(){
+        var timer = setInterval(function(){
+            sec--;
+            document.getElementById('timerDisplay').innerHTML='00:'+sec;
+            if (sec < 0) {
+                clearInterval(timer);
+                alert("Time is up!");
+                location.reload()
+            }
+        }, 1000);
+    }
+    document.getElementById('incorrect').addEventListener('click', function() {
+        sec -= 5;
+        document.getElementById('timerDisplay').innerHTML='00:'+sec;
+    });
+    startTimer();
+})();
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
 
-        display.text(minutes + ":" + seconds);
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//         display.text(minutes + ":" + seconds);
+//         if (--timer < 0) {
+//             timer = duration;
+//         }
+//     }, 1000);
     
-}
+// }
 
-jQuery(function ($) {
-    var halfMinute = 60 * 0.5;
-        display = $('#time');
-    startTimer(halfMinute, display);
-});
+// jQuery(function ($) {
+//     var oneMinute = 60 * 1.0;
+//         display = $('#time');
+//     startTimer(oneMinute, display);
+// });

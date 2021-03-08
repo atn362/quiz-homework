@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 
 </head>
 
@@ -37,7 +37,7 @@
                     <li><input name="q2" type="radio" value="a">Basilia</li>
                     <li><input name="q2" type="radio" value="b">Salvador</li>
                     <li><input name="q2" type="radio" value="c">Rio De Janeiro</li>
-                    <li><input name="q2" type="radio" value="d">Sap Paulo</li>
+                    <li><input name="q2" type="radio" value="d">Sao Paulo</li>
                 </ul>
                 <button id="submit">Submit</button>
 
@@ -84,16 +84,19 @@
             <button onclick="location.reload();" class="reload">Try Again?</button>
         </div>
         </main>
+        
+ 
         <footer>
-            <div class="timer">Timer:<span id="time">00:30</span></div>
+            <div id="timerDisplay">01:00</div>
+            <button id="incorrect">Simulate Incorrect Answer</button>
             <div class="pull-right">Total: 5 Questions</div>
-            <div class="pull-left">Created by Alex Norton for Week 4 Homework Assignment</div>
+            <div class="pull-left">Created by Alex Norton for Week 4 Homework: Quiz Assignment</div>
         </footer>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./styles.js"></script>
+    <script src="./assets/styles.js"></script>
 </body>
 
 </html>
