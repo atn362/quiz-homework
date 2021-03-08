@@ -103,7 +103,6 @@ function process(q){
     }
     return false;
 }
-location.reload();
 //loads the events which process the functions of the quiz
 window.addEventListener('load', init, false);
 }
