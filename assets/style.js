@@ -11,6 +11,8 @@ function score(){
     sessionStorage.setItem('a5', 'c');
 
 }
+init();
+
 alert("Read Some Questions Carefully");
 
 $(document).ready(function(){

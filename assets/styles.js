@@ -3,6 +3,7 @@ var score = 0;
 var total = 5;
 var point = 1;
 var highest = total * point; 
+var a1 = "b";
 
 //sends alert to read carefully
 alert("Read Some Questions Carefully");
@@ -16,6 +17,7 @@ function init(){
     sessionStorage.setItem('a5', 'c');
 
 }
+
 //runs the function 
 init();
 
@@ -106,6 +108,9 @@ function process(q){
 //loads the events which process the functions of the quiz
 window.addEventListener('load', init, false);
 }
+
+    
+
 
 //this function allows for the timer to be set at 1 minute and counts down in seconds
 //
